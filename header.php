@@ -19,7 +19,9 @@
                 <div class="search_box"> <?php echo get_search_form(); ?></div>
             </div>
             <div class="header_third logo_section">
-               <a class="logo_link" href="<?php echo home_url("/");?>"><img src="<?php echo ale_get_option("sitelogo")?>" /> </a>
+                <?php if(ale_get_option("sitelogo")) { ?>
+                  <a class="logo_link" href="<?php echo home_url("/");?>"><img src="<?php echo ale_get_option("sitelogo")?>" /> </a>
+                <?php } ?>
             </div>
             <div class="header_third social_section">
                 <?php if(ale_get_option('yt')) { ?><a href="<?php echo ale_get_option('yt') ?>"><i class="fab fa-youtube"></i></a><?php } ?>

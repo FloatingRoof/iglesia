@@ -14,6 +14,33 @@ jQuery(function($) {
         smoothHeight:true,
         controlNav: false
     });
+    $('.flexslider').flexslider({
+        animation:'slide',
+        //smoothHeight:true,
+        controlNav: false,
+        prevText: "<i class=\"fas fa-chevron-left\"></i>",
+        nextText: "<i class=\"fas fa-chevron-right\"></i>"
+    });
+
+    $('.flexslider .flex-viewport').css('overflow','visible');
+
+
+
+    $('.menu_icon i.fa-bars').on('click',function () {
+        $('.menu_icon i.fa-bars').css('display','none');
+        $('.menu_icon i.fa-times').css('display','inline-block');
+        $('.top_navigation').css('display','block');
+    });
+
+    $('.menu_icon i.fa-times').on('click',function () {
+        $('.menu_icon i.fa-bars').css('display','inline-block');
+        $('.menu_icon i.fa-times').css('display','none');
+        $('.top_navigation').css('display','none');
+    });
+
+
+
+
 
 });
 
@@ -37,7 +64,7 @@ Modernizr.addTest('positionfixed', function () {
     var test    = document.createElement('div'),
         control = test.cloneNode(false),
         fake = false,
-        root = document.body || (function () {
+            root = document.body || (function () {
             fake = true;
             return document.documentElement.appendChild(document.createElement('body'));
         }());

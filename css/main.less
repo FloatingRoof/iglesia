@@ -8,7 +8,8 @@
 @color_yellow: #eedf9c;
 @color_hover: #804258;
 @color_footer_grey: #b4b4b4;
-
+@color_header: #7f4258;
+@color_icon: #fdeb9c;
 /* Your Custom code here */
 
 .wrapper{
@@ -495,6 +496,90 @@ footer.main-footer{
       float: left;
       &.twitter{
         width: 33.33%;
+
+      /* Это если раскомендировать твиттер  iframe{
+
+          height: 100% !important;
+          width: 100% !important;
+        }*/
+        .widget_latest_tweets_widget{
+          margin-left:40px;
+          font-family: Arial, Helvetica, sans-serif;
+
+          .footer_widget_title{
+            font-size:12px;
+            color:@color_footer_grey;
+            text-transform: none;
+            line-height: 24px;
+            margin-bottom: 0;
+            &::before{
+              display: inline-block;
+              font-family: "Font Awesome 5 Brands";
+              content: "\f099";
+              font-size: 24px ;
+              font-weight: 400;
+              font-style: normal;
+              font-variant: normal;
+              text-rendering: auto;
+              color: #4ad2ff;
+              margin-right: 15px;
+            }
+
+          }
+
+
+          .latest-tweets{
+            font-size: 11px;
+            color: @color_footer_grey;
+            line-height: 20px;
+            position: relative;
+            a{
+              color: inherit;
+              time{
+                font-size: 10px;
+              }
+            }
+
+            ul{
+              li{
+                margin-top: 30px;
+              }
+            }
+            .flex-control-nav{
+              position: absolute;
+              top: 0;
+              right: 0;
+              margin-top: -24px;
+              li{
+                display: inline-block;
+                font-size: 0;
+                margin: 5px;
+                a{
+                  width: 6px;
+                  height: 6px;
+                  display: block;
+
+                  &.flex-active{
+                    &::before{ color:#999999;}
+                  }
+
+                  &::before{
+                    display: inline-block;
+                    content: "\f111";
+                    font: normal normal 900 6px/1 "Font Awesome 5 Free";
+                    color: #e5e5e5;
+                    .transition(all 300ms ease-in-out);
+
+                    &:hover{
+                      color:#999999;
+                      .transition(all 300ms ease-in-out)
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
       &.footer_logo,&.contact,&.menu_info{
         width: 22.22%;
@@ -606,6 +691,96 @@ footer.main-footer{
         &:hover{
           color:@color_darkgrey;
           .transition(all 300ms ease-in-out);
+        }
+      }
+    }
+  }
+}
+
+/* Inner Header Style*/
+
+.inner_header{
+  min-height: 68px;
+  background-color: @color_header;
+  color: #b18b99;
+  text-align: center;
+  font-family: 'Droid Serif', serif;
+  .breadcrumbs{
+    padding-top: 30px;
+    padding-bottom: 10px;
+  }
+  a{
+    color: #fff;
+    .transition(all 300ms ease-in-out);
+    &:hover{
+      .opacity(0.6);
+      .transition(all 300ms ease-in-out);
+    }
+  }
+}
+/* Contact Style */
+.container{
+  margin-top: 40px;
+  color: #a3a3a3;
+  color: #a3a3a3;
+  h2.page_title{
+    text-align: center;
+    color: @color_header;
+    font-size: 64px;
+    text-transform: uppercase;
+    margin-bottom: 45px;
+  }
+  .page_content{
+    font-family: 'Playfair Display SC', serif;
+
+    font-size: 14px;
+    line-height: 24px;
+    text-align: center;
+    margin-bottom: 50px;
+    p{
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+    }
+  }
+  .contacts_data{
+    margin-bottom: 90px;
+    margin-left: 80px;
+    margin-right: 80px;
+    .third_part{
+      float: left;
+      width: 33%;
+
+      &.emailbox{
+        box-sizing: border-box;
+        padding-left: 40px;
+
+      }
+
+      i.fas{
+        font-size: 18px;
+        color: @color_icon;
+        margin-right: 10px;
+      }
+      span.label{
+        display: block;
+        font-size: 12px;
+        line-height: 24px;
+      }
+      span.value{
+        margin-left: 32px;
+        font-size: 15px;
+        color: #000;
+        &.phone_number{
+          font-size: 28px;
+        }
+        a{
+          color: inherit;
+          .transition(all 300ms ease-in-out);
+          &:hover{
+            .opacity(0.6);
+            .transition(all 300ms ease-in-out);
+          }
         }
       }
     }

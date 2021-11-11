@@ -38,7 +38,11 @@ jQuery(function($) {
         $('.top_navigation').css('display','none');
     });
 
-
+    $('.latest-tweets').flexslider({
+        animation: 'slide',
+        selector: "ul > li",
+        directionNav: false,
+    });
 
 
 

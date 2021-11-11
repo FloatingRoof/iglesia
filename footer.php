@@ -43,7 +43,40 @@
 
                 </div>
                 <div class="twitter footer_inner">
-                    twitter
+                   <!-- Тут должен быть футер твиттера, но мне не одобрили api <?php get_sidebar('footer'); ?>-->
+                    <div class="widget_latest_tweets_widget">
+
+                        <h5 class="footer_widget_title">@iglesia</h5>
+                        <div class="latest-tweets">
+                            <ul>
+                                <li>
+                                    <p class="tweet-text">Мне понравилось видео "Как сделать шаблон для WordPress из PSD Макета #7. Футер</p>
+                                    <p class="tweet-details">
+                                        <a href="https://pikabu.ru/community/steam" target="_blank">
+                                            <time datetime="2016-11-12 16:40:21+0000">November 22, 2016, 4:40 pm</time>
+                                        </a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="tweet-text">Мне понравилось видео "Как сделать шаблон для WordPress из PSD Макета #7. Футер</p>
+                                    <p class="tweet-details">
+                                        <a href="https://pikabu.ru/community/steam" target="_blank">
+                                            <time datetime="2016-11-12 16:40:21+0000">November 22, 2016, 4:40 pm</time>
+                                        </a>
+                                    </p>
+                                </li>
+                                <li>
+                                    <p class="tweet-text">Мне понравилось видео "Как сделать шаблон для WordPress из PSD Макета #7. Футер</p>
+                                    <p class="tweet-details">
+                                        <a href="https://pikabu.ru/community/steam" target="_blank">
+                                            <time datetime="2016-11-12 16:40:21+0000">November 22, 2016, 4:40 pm</time>
+                                        </a>
+                                    </p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </div>

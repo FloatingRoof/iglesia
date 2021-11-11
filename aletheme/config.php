@@ -319,43 +319,65 @@ function aletheme_metaboxes($meta_boxes) {
 
 
     $meta_boxes[] = array(
-        'id'         => 'home_page_metabox',
-        'title'      => 'Home Meta Options',
+        'id'         => 'contacts_page_metabox',
+        'title'      => 'Contacts Options',
         'pages'      => array( 'page', ), // Post type
         'context'    => 'normal',
         'priority'   => 'high',
         'show_names' => true, // Show field names on the left
-        'show_on'    => array( 'key' => 'page-template', 'value' => array('page-home.php'), ), // Specific post templates to display this metabox
+        'show_on'    => array( 'key' => 'page-template', 'value' => array('template-contact.php'), ), // Specific post templates to display this metabox
 
         'fields' => array(
             array(
-                'name' => 'First Description',
+                'name' => __('Label 1', 'aleteheme'),
                 'desc' => 'Insert the text',
-                'id'   => $prefix . 'descr1',
-                'type' => 'textarea',
-            ),
-            array(
-                'name' => 'Second Description',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'descr2',
+                'id'   => $prefix . 'phone_label',
+                'std' => 'Phone',
                 'type' => 'text',
             ),
             array(
-                'name' => 'File Upload',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'fileupload',
-                'type' => 'file',
+                'name' => __('Text Label 1', 'aleteheme'),
+                'desc' => 'Insert the text for Label 1',
+                'id'   => $prefix . 'phone_number',
+                'type' => 'text',
             ),
+
             array(
-                'name' => 'Text Date',
-                'desc' => 'Insert the text',
-                'id'   => $prefix . 'datefield',
-                'type' => 'wysiwyg',
+                'name' => __('Label 2', 'aleteheme'),
+                'desc' => 'Insert the text for Label 2',
+                'id'   => $prefix . 'address_label',
+                'std' => 'Address',
+                'type' => 'text',
             ),
+
+            array(
+                'name' => __('Text Label 2', 'aleteheme'),
+                'desc' => 'Insert the text for Label 2',
+                'id'   => $prefix . 'address',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => __('Label 3', 'aleteheme'),
+                'desc' => 'Insert the text for Label 3',
+                'id'   => $prefix . 'email_label',
+                'std' => 'Email',
+                'type' => 'text',
+            ),
+
+            array(
+                'name' => __('Text Label 3', 'aleteheme'),
+                'desc' => 'Insert the text for Label 3',
+                'id'   => $prefix . 'email',
+                'type' => 'text',
+            ),
+
+
+
         )
     );
 
-    $meta_boxes[] = array(
+    /*$meta_boxes[] = array(
         'id'         => 'press_page_metabox',
         'title'      => 'Press Page Options',
         'pages'      => array( 'page', ), // Post type
@@ -614,10 +636,10 @@ function aletheme_metaboxes($meta_boxes) {
                 'type' => 'text',
             ),
         )
-    );
+    );*/
 
 
-    $meta_boxes[] = array(
+    /*$meta_boxes[] = array(
         'id'         => 'aboutslider_page_metabox',
         'title'      => 'About Page Options',
         'pages'      => array( 'page', ), // Post type
@@ -795,7 +817,7 @@ function aletheme_metaboxes($meta_boxes) {
                 'type'    => 'file',
             ),
         )
-    );
+    );*/
 
 	return $meta_boxes;
 }
